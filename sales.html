@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales - Eatery POS System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="app sales-layout">
+
+    <header class="topbar">
+      <h1>Eatery POS System</h1>
+      <span id="dateDisplay"></span>
+    </header>
+
+    <aside class="sidebar">
+      <a href="index.html" class="menu-item">
+        <i class="fa-solid fa-house"></i>
+        <span>POS</span>
+      </a>
+
+      <a href="inventory.html" class="menu-item">
+        <i class="fa-solid fa-cube"></i>
+        <span>Inventory</span>
+      </a>
+
+      <a href="sales.html" class="menu-item active">
+        <i class="fa-solid fa-cash-register"></i>
+        <span>Sales</span>
+      </a>
+
+      <a href="dashboard.html" class="menu-item">
+        <i class="fa-solid fa-chart-column"></i>
+        <span>Dashboard</span>
+      </a>
+    </aside>
+
+    <main class="main-content">
+      <div class="sales-container">
+        <h2>Sales History</h2>
+
+        <div class="sales-cards">
+          <div class="sales-card">
+            <div class="sales-card-icon blue-bg">
+              <i class="fa-regular fa-money-bill-1"></i>
+            </div>
+            <div>
+              <p>Total Orders</p>
+              <h3 id="salesTotalOrders">0</h3>
+            </div>
+          </div>
+
+          <div class="sales-card">
+            <div class="sales-card-icon green-bg">
+              <i class="fa-solid fa-peso-sign"></i>
+            </div>
+            <div>
+              <p>Total Revenue</p>
+              <h3 id="salesTotalRevenue">₱0.00</h3>
+            </div>
+          </div>
+
+          <div class="sales-card">
+            <div class="sales-card-icon purple-bg">
+              <i class="fa-regular fa-calendar"></i>
+            </div>
+            <div>
+              <p>Today's Orders</p>
+              <h3 id="salesTodayOrders">0</h3>
+            </div>
+          </div>
+
+          <div class="sales-card">
+            <div class="sales-card-icon orange-bg">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+            </div>
+            <div>
+              <p>Today's Revenue</p>
+              <h3 id="salesTodayRevenue">₱0.00</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="sales-grid">
+          <div class="sales-panel">
+            <div class="panel-header">
+              <h3>Recent Orders</h3>
+            </div>
+            <div id="recentOrdersList" class="recent-orders-list"></div>
+          </div>
+
+          <div class="sales-panel">
+            <div class="panel-header">
+              <h3>Order Details</h3>
+            </div>
+            <div id="orderDetailsBox" class="order-details-box">
+              <p class="empty-sales-text">Select an order to view details.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

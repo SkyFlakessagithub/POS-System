@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eatery POS System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="app">
+
+    <header class="topbar">
+      <h1>Nani's POS System</h1>
+      <span id="dateDisplay"></span>
+    </header>
+
+    <aside class="sidebar">
+      <a href="index.html" class="menu-item active">
+        <i class="fa-solid fa-house"></i>
+        <span>POS</span>
+      </a>
+
+      <a href="inventory.html" class="menu-item">
+        <i class="fa-solid fa-cube"></i>
+        <span>Inventory</span>
+      </a>
+
+      <a href="sales.html" class="menu-item">
+        <i class="fa-solid fa-cash-register"></i>
+        <span>Sales</span>
+      </a>
+
+      <a href="dashboard.html" class="menu-item">
+        <i class="fa-solid fa-chart-column"></i>
+        <span>Dashboard</span>
+      </a>
+    </aside>
+
+    <main class="main-content">
+      <div class="pos-header">
+        <h2>Point of Sale</h2>
+      </div>
+
+      <div class="categories">
+        <button class="category-btn active" data-category="All">All</button>
+        <button class="category-btn" data-category="Main">Main</button>
+        <button class="category-btn" data-category="Drinks">Drinks</button>
+      </div>
+
+      <div class="products" id="productList"></div>
+    </main>
+
+    <aside class="order-panel">
+      <div class="order-header">
+        <h2><i class="fa-solid fa-cart-shopping"></i> Current Order</h2>
+      </div>
+
+      <div class="cart-items" id="cartItems">
+        <div class="empty-cart" id="emptyCart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <p>Cart is empty</p>
+        </div>
+      </div>
+
+      <div class="order-summary">
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <span id="subtotal">0.00</span>
+        </div>
+
+        <div class="summary-row total-row">
+          <span>Total:</span>
+          <span id="total">0.00</span>
+        </div>
+
+        <button id="completeOrderBtn" disabled>
+          Complete Order
+        </button>
+      </div>
+    </aside>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

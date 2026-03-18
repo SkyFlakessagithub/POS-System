@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Eatery POS System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="app sales-layout">
+
+    <header class="topbar">
+      <h1>Eatery POS System</h1>
+      <span id="dateDisplay"></span>
+    </header>
+    
+    <aside class="sidebar">
+      <a href="index.html" class="menu-item">
+        <i class="fa-solid fa-house"></i>
+        <span>POS</span>
+      </a>
+
+      <a href="inventory.html" class="menu-item">
+        <i class="fa-solid fa-cube"></i>
+        <span>Inventory</span>
+      </a>
+
+      <a href="sales.html" class="menu-item">
+        <i class="fa-solid fa-cash-register"></i>
+        <span>Sales</span>
+      </a>
+
+      <a href="dashboard.html" class="menu-item active">
+        <i class="fa-solid fa-chart-column"></i>
+        <span>Dashboard</span>
+      </a>
+    </aside>
+
+    <main class="main-content">
+      <div class="dashboard-container">
+        <h2>Dashboard</h2>
+        <p class="dashboard-subtitle">Overview of your eatery's performance</p>
+        <button onclick="resetSystemData()" class="reset-btn">
+        Reset System
+        </button>
+
+        <div class="sales-cards">
+          <div class="sales-card">
+            <div class="sales-card-icon green-bg">
+              <i class="fa-solid fa-peso-sign"></i>
+            </div>
+            <div>
+              <p>Total Revenue</p>
+              <h3 id="dashboardRevenue">₱0.00</h3>
+            </div>
+          </div>
+
+          <div class="sales-card">
+            <div class="sales-card-icon blue-bg">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <div>
+              <p>Total Orders</p>
+              <h3 id="dashboardOrders">0</h3>
+            </div>
+          </div>
+
+          <div class="sales-card">
+            <div class="sales-card-icon purple-bg">
+              <i class="fa-solid fa-cube"></i>
+            </div>
+            <div>
+              <p>Products</p>
+              <h3 id="dashboardProducts">0</h3>
+            </div>
+          </div>
+
+          <div class="sales-card">
+            <div class="sales-card-icon orange-bg">
+              <i class="fa-solid fa-coins"></i>
+            </div>
+            <div>
+              <p>Inventory Value</p>
+              <h3 id="dashboardInventoryValue">₱0.00</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="sales-panel">
+            <div class="panel-header">
+              <h3>Top Selling Products</h3>
+            </div>
+            <div id="topSellingList" class="dashboard-list"></div>
+          </div>
+
+          <div class="sales-panel">
+            <div class="panel-header">
+              <h3>Sales by Category</h3>
+            </div>
+            <div id="salesByCategoryList" class="dashboard-list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

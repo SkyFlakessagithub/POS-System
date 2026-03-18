@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory - Eatery POS System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+
+<body>
+  <div class="app inventory-layout">
+
+    <header class="topbar">
+      <h1>Nani's POS System</h1>
+      <span id="dateDisplay"></span>
+    </header>
+
+    <aside class="sidebar">
+      <a href="index.html" class="menu-item">
+        <i class="fa-solid fa-house"></i>
+        <span>POS</span>
+      </a>
+
+      <a href="inventory.html" class="menu-item active">
+        <i class="fa-solid fa-cube"></i>
+        <span>Inventory</span>
+      </a>
+
+      <a href="sales.html" class="menu-item">
+        <i class="fa-solid fa-cash-register"></i>
+        <span>Sales</span>
+      </a>
+
+      <a href="dashboard.html" class="menu-item">
+        <i class="fa-solid fa-chart-column"></i>
+        <span>Dashboard</span>
+      </a>
+    </aside>
+
+    <main class="main-content">
+  <div class="inventory-container">
+
+    <div class="inventory-header">
+      <h2>Inventory Management</h2>
+      <button class="add-product-btn" onclick="addProduct()">
+         <i class="fa-solid fa-plus"></i> Add Product
+      </button>
+    </div>
+
+    <div class="inventory-cards">
+      <div class="card">
+        <p>Total Products</p>
+        <h3 id="totalProducts">0</h3>
+      </div>
+
+      <div class="card">
+        <p>Categories</p>
+        <h3 id="totalCategories">0</h3>
+      </div>
+
+      <div class="card">
+        <p>Low Stock Items</p>
+        <h3 id="lowStock" class="low-stock-number">0</h3>
+      </div>
+
+      <div class="card">
+        <p>Total Inventory Value</p>
+        <h3 id="totalValue" class="inventory-total-value">₱0.00</h3>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="inventory-table">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Value</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="inventoryTable"></tbody>
+      </table>
+    </div>
+    
+  </div>
+  
+</main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
